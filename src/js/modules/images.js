@@ -22,10 +22,12 @@ const images = () => {
             imgPopup.style.display = 'flex';
             const path = target.parentNode.getAttribute('href');
             bigImage.setAttribute('src', path);
+            document.body.classList.add('modal-open');
         }
 
         if (target && target.matches('div.popup')) {
             imgPopup.style.display = 'none';
+            document.body.classList.remove('modal-open');
         }
     });
 };
